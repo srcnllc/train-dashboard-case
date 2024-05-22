@@ -1,0 +1,13 @@
+@media only screen and (min-width: 768px) {
+  .sideLink {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--1) * 10);
+    img {
+      width: calc(var(--1) * 25);
+      height: calc(var(--1) * 25);
+    }
+  }
+}
+@media only screen and (max-width: 767.98px) {
+}

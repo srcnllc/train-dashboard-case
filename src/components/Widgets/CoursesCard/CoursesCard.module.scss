@@ -1,0 +1,53 @@
+@media only screen and (min-width: 768px) {
+    .coursesCard{
+        border:1px solid  rgb(207 216 220);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: rgb(255 255 255 / 1);
+        border-radius: calc(var(--1)*10);
+        padding-block: calc(var(--1)*20);
+        padding-inline: calc(var(--1)*20);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: calc(var(--1)*10);
+        .coursesCardHeader{
+            display: flex;
+            justify-content: center;
+            gap: calc(var(--1)*10);
+            font-weight: bold;
+            color: black;
+            .acttiveStatus{
+                color: var(--green);
+                font-weight: bold;
+            }
+        }
+        .coursesCardBody{
+            border-top: 1px solid rgb(207 216 220);
+            padding-block: calc(var(--1)*10);
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--1)*5);
+            .coursesCardHeaderTitle{
+                text-align: center;
+            }
+
+        }
+        .coursesCardFooter{
+            border-top: 1px solid rgb(207 216 220);
+            padding-top: calc(var(--1)*10);
+            text-align: center;
+            .coursesCardFooterDueDate{
+                font-weight: bold;
+                color: black;
+                span{
+                    color: var(--red);
+                }
+            }
+        }
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+
+  }
+  

@@ -1,0 +1,70 @@
+@media only screen and (min-width: 768px) {
+  .sidenavTypes{
+    position: sticky;
+    width:calc(var(--1)*400);
+    inset: 0;
+    z-index: 50;
+    margin-block: calc(var(--1)*25);
+    margin-left: calc(var(--1)*25);
+    border:1px solid  rgb(207 216 220);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(255 255 255 / 1);
+    border-radius: calc(var(--1)*12);
+    .title{
+       font-family: 'Roboto Condensed';
+       font-style: normal;
+       font-weight: 700;
+       font-size: calc(var(--1)*20);
+       line-height: calc(var(--1)*24);
+      //  color: rgb(96 125 139);
+       color: var(--textColor);
+       margin: calc(var(--1)*20);
+       text-transform: capitalize;
+       text-align: center;
+       padding-block: calc(var(--1)*50);
+
+    }
+    .nav{
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--1)*10);
+        padding-inline: calc(var(--1)*20);
+
+        li{
+          width: 100%;
+          font-weight: 700;
+          text-transform: capitalize;
+          font-family: Roboto, sans-serif;
+          font-size: calc(var(--1)*20);
+          line-height: calc(var(--1)*20);
+          color: rgb(96 125 139);
+          border-radius: calc(var(--1)*8);
+          padding-block: calc(var(--1)*20);
+          padding-inline: calc(var(--1)*20);
+          cursor: pointer;
+          a{
+            display: flex;
+            align-items: center;
+            gap: calc(var(--1)*10);
+            svg{
+              width: calc(var(--1)*25);
+              height: calc(var(--1)*25);
+            }
+          }
+          &.active{
+            color: rgb(255 255 255);
+            background-image: linear-gradient(to top right,#212121,#424242);            
+          }
+          &:hover{
+            color: rgb(255 255 255);
+            background-image: linear-gradient(to top right,#212121,#424242);   
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767.98px) {
+
+}

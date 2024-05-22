@@ -1,0 +1,21 @@
+@media only screen and (min-width: 768px) {
+    .upcomingCoursesPage {
+        .coursesContainer{
+          display: flex;
+          flex-direction: column;
+          gap: calc(var(--1) * 24);
+          color: var(--textColor);
+            .topEmployees {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: calc(var(--1) * 24);
+            
+          }
+        }
+    }
+  }
+  
+  @media only screen and (max-width: 767.98px) {
+
+  }
+  
