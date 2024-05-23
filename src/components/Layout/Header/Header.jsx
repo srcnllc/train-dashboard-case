@@ -17,9 +17,6 @@ export default function Header({data}) {
               Yeni Ekip Oluştur
               </button>
               <button className="btn green" onClick={()=>alert("Ekibe Yeni Çalışan Ekleme Butonuna Tıklandı")}>
-                <div className="icon">
-                  <img src={'/images/icons/wallet.svg'} alt='wallet'/>
-                </div>
                 Ekibe Yeni Çalışan Ekleme
               </button>
             </div>
