@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/train-dashboard-case/static/css/main.fd639606.css",
+    "main.js": "/train-dashboard-case/static/js/main.82da6fd5.js",
+    "index.html": "/train-dashboard-case/index.html",
+    "main.fd639606.css.map": "/train-dashboard-case/static/css/main.fd639606.css.map",
+    "main.82da6fd5.js.map": "/train-dashboard-case/static/js/main.82da6fd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd639606.css",
+    "static/js/main.82da6fd5.js"
+  ]
+}
