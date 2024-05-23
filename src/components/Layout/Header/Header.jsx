@@ -1,9 +1,8 @@
 import Container from '../../Tools/Container/Container';
 import styles from './Header.module.scss';
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Header({data}) {
-  const [active, setActive] = useState(true);
   return (
     <>
       <header className={styles.header}>
@@ -24,7 +23,6 @@ export default function Header({data}) {
                 Ekibe Yeni Çalışan Ekleme
               </button>
             </div>
-
           </div>
         </Container>
       </header>

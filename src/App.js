@@ -16,10 +16,9 @@ function App() {
   useEffect(() => {
     dispatch(getData())
   }, [dispatch])
-  console.log("hoe veri",data.data?.activity_hours)
 
   return (
-    <div className="App">
+    <div className="App ">
       <Sidebar/>
       <div className="content">
         <Header data={data}/>

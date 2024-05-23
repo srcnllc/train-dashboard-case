@@ -28,11 +28,9 @@ export default function Home({data}) {
         <div className={styles.skills}>
           <h2 className={styles.title}>Skills In Development</h2>
           <div className={styles.content}>
-          <div className={styles.content}>
           {data.data?.skills_in_development.map((item,index)=>(
           <Skills key={index} employees={item.employees} skill={item.skill}/>
         ))}
-          </div>
           </div>
         </div>
         </div>

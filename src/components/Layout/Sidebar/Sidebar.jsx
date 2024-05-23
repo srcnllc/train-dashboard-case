@@ -1,12 +1,13 @@
 import Container from '../../Tools/Container/Container';
 import styles from './Sidebar.module.scss';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SideLink from '../../Tools/SideLink/SideLink';
 import { HiExclamationCircle, HiHome, HiMiniUserCircle, HiOutlineTableCells } from "react-icons/hi2";
 import { useLocation } from 'react-router-dom';
 
 
 export default function Sidebar() {
+  const [active,setActive] = useState();
   const location = useLocation();
   const navList = [
     {
@@ -30,9 +31,22 @@ export default function Sidebar() {
       Image:<HiExclamationCircle />
     },
   ];
+  const handleLinkClick = () => {
+    setActive(false); 
+  };
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [active]);
   return (
     <>
-    <aside className={styles.sidenavTypes}>
+    <aside  className={`${styles.sidenavTypes} ${active ? styles.activeSide : ''}`}>
       <Container>
       <div className={styles.title}>
       <h2>Dashboard Case TrainIQ </h2>
@@ -45,6 +59,7 @@ export default function Sidebar() {
                 <li 
                   key={index} 
                   className={isActive ? styles.active : ''}
+                  onClick={handleLinkClick}
                 >
                     <SideLink title={item.title} slug={item.slug} image={item.Image} />
                 </li>
@@ -52,6 +67,15 @@ export default function Sidebar() {
             })}
           </ul>
         </div>
+        <div
+              onClick={() => setActive(!active)}
+              className={`${styles.hamburger} ${
+                active ? styles.active : ''
+              } d-sm`}>
+              <span />
+              <span />
+              <span />
+            </div>
       </Container>
     </aside>
     </>
