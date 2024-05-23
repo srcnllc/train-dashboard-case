@@ -13,7 +13,7 @@ export default function Header({data}) {
               <p>Total Completed Courses: <span>{data.data?.total_completed_courses}</span></p>
               <p>Total Employees: <span>{data.data?.total_employees}</span></p>
             </div>
-            <div className={`${styles.rightBar} d-md`}>
+            <div className={`${styles.rightBar}`}>
               <button className="btn white" onClick={()=>alert("Yeni Ekip Oluşturma Butonuna Tıklandı")}>
               Yeni Ekip Oluştur
               </button>
@@ -24,15 +24,7 @@ export default function Header({data}) {
                 Ekibe Yeni Çalışan Ekleme
               </button>
             </div>
-            <div
-              onClick={() => setActive(!active)}
-              className={`${styles.hamburger} ${
-                active ? styles.active : ''
-              } d-sm`}>
-              <span />
-              <span />
-              <span />
-            </div>
+
           </div>
         </Container>
       </header>

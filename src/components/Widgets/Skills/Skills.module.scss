@@ -1,25 +1,39 @@
 @media only screen and (min-width: 768px) {
-  .skillsCard{
-    border:1px solid  rgb(207 216 220);
+  .skillsCard {
+    border: 1px solid rgb(207 216 220);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: rgb(255 255 255 / 1);
-    border-radius: calc(var(--1)*10);
-    padding-block: calc(var(--1)*20);
-    padding-inline: calc(var(--1)*20);
+    border-radius: calc(var(--1) * 10);
+    padding-block: calc(var(--1) * 20);
+    padding-inline: calc(var(--1) * 20);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc(var(--1)*10);
-    p{
+    gap: calc(var(--1) * 10);
+    p {
       font-weight: bold;
       color: black;
     }
- 
   }
-  }
-  
-  @media only screen and (max-width: 768px) {
+}
 
+@media only screen and (max-width: 768px) {
+  .skillsCard {
+    border: 1px solid rgb(207 216 220);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(255 255 255 / 1);
+    border-radius: calc(var(--dsm-1) * 10);
+    padding-block: calc(var(--dsm-1) * 20);
+    padding-inline: calc(var(--dsm-1) * 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--dsm-1) * 10);
+    p {
+      font-weight: bold;
+      color: black;
+    }
   }
-  
+}

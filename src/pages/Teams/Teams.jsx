@@ -13,7 +13,7 @@ export default function Teams({ data }) {
       <Container large>
         <div className={styles.teamAcordion}>
       {data.data?.teams.map((item,index)=>(
-        <div className={styles.team}>
+        <div className={styles.team} key={index}>
           <div className={styles.teamHeader} onClick={() => handleToggle(index)}>
             <div className={styles.headerTitle}>            
               <h3>{item.title}</h3>

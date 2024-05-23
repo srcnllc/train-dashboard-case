@@ -11,31 +11,34 @@ export default function TopList({ data }) {
             <h2 className={styles.title}>Top Employees</h2>
             <div className={styles.content}>
               <table className={styles.customers}>
+              <thead>
               <tr>
                   <th>Name</th>
                   <th>Title</th>
                   <th>E-mail</th>
                   <th>Current Score</th>
                 </tr>
+                </thead>
+                <tbody>
                 {data.data?.top_employees.map((item,index)=>(
-                  <tr>
+                  <tr key={index}>
                     <td>{item.name}</td>
                     <td>{item.title}</td>
                     <td>{item.email}</td>
                     <td>{item.current_score}</td>
                   </tr>
-                ))}              
+                ))}  
+                  </tbody>
+            
               </table>
             </div>
           </div>
           <div className={styles.skills}>
           <h2 className={styles.title}>Top Skills</h2>
           <div className={styles.content}>
-          <div className={styles.content}>
           {data.data?.top_skills.map((item,index)=>(
-          <Skills key={index} employees={item.employees} skill={item.skill}/>
+          <Skills employees={item.employees} skill={item.skill}  key={index}/>
         ))}
-          </div>
           </div>
         </div>
         </div>
